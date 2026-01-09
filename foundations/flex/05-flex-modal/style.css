@@ -20,6 +20,30 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* mysolution: makes modal flexbox & icon, right-section as flex-items */
+  display: flex;
+  /* mysolution: appropriate gap between icon & right-section */
+  gap: 10px;
+  /* mysolution: adds appropriate padding */
+  padding: 20px;
+}
+
+/* mysolution: makes the header flex-box i.e., header text
+ * & "X" button as flex-items
+ * justify-content: space-between; keeps header text, X button apart
+ * makes header text bold */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* mysolution: adds some space to bottom of text */
+.text {
+  margin-bottom: 15px;
 }
 
 .icon {
@@ -33,6 +57,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* mysolution: to prevent icon from warping */
+  flex-shrink: 0;
 }
 
 .close-button {
