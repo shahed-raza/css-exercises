@@ -12,22 +12,24 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
-  /* mysolution: making header as flexbox */
+  /* mysolution: to make the header as the flex-box 
+   * and "left div" && "right div" as flex-items */
+  display: flex;
+  /* mysolution: to push the left div flex-item & right div flex-item
+   * to their respective ends used "space-between" */
+  justify-content: space-between;
+}
+
+/* mysoluton: left div & right div are flex-boxes */
+.left, .right {
   display: flex;
   align-items: center;
+  /* mysolution: for enough space(margin, gap) between the flex-items
+   * (logo, links, button, profile-image) */
+  margin: 10px;
+  gap: 10px;
 }
 
-/* mysolution: enough margin to create space between logo & ul */
-.logo, ul {
-  margin: 10px;
-}
-
-/* mysolution: margin-left as "auto" to push the notification button
-   to the right end (exclusively applicable to flex-items) */
-.notifications {
-  margin: 10px;
-  margin-left: auto;
-}
 
 .profile-image {
   background: rebeccapurple;
@@ -35,10 +37,8 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  /* mysolution: to prevent the circular profile image from warping */
+  /* mysolution: to prevent profile-image (flex-item) from warping */
   flex-shrink: 0;
-  /* mysolution: enough margin for profile-image */
-  margin: 10px;
 }
 
 .logo {
@@ -64,10 +64,10 @@ a {
 
 ul {
   list-style-type: none;
-  /* mysolution: to make the ul as "flexbox" */
+  /* mysolution: to make the ul as flex-box & links as flex-items */
   display: flex;
-  /* mysolution: to remove the extra default padding in the ul */
+  /* mysolution: to remove the default extra padding of the ul */
   padding: 0;
-  /* mysolution: gap adjustment between the links */
+  /* mysolution: adds enough gap between links */
   gap: 10px;
 }
