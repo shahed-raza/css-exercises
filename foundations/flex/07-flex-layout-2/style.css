@@ -2,28 +2,90 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  /* mysolution: making body as vertical flex-box (vertical kebab)
+   * to handle the header, content, footer using flex-box concepts (for further usage) */
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  /* mysolution: adjust font-weight, size 
+   * adds padding to the left of header */
+  font-weight: 900;
+  font-size: 32px;
+  padding-left: 16px;
+  /* mysolution: making the header as flex-box to position it
+   * at start (horizontally) && center (vertically) */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.footer {
-  height: 72px;
-  background: #eee;
-  color: darkmagenta;
+/* mysolution: makes sidebar, cards section as flex-items */
+.content {
+  display: flex;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /* mysolution: to prevent sidebar from shrinking */
+  flex-shrink: 0;
+}
+
+/* mysolution: for links in sidebar
+ * adjusts color, font-size, adds padding */
+.sidebar a {
+  /* removes the line under links */
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+
+/* mysolution: removes bullet points of ul
+ * and default extra padding of ul */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  /* makes the ul of sidebar as vertical flex-box (vertical kebab) & li within it as flex-items */ 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 4px;
+}
+
+/* mysolution: makes the whole card section as flex-box with each
+ * card as flex-item to arrange them && wrap them accordingly */
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  /* adds 30px gap between each card */
+  gap: 32px;
+  padding: 48px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  /* mysolution: adds padding to each card */
+  padding: 16px;
+  /* mysolution: initial width of cards if sufficient space is available in the flex-box */
+  flex-basis: 300px;
+}
+
+.footer {
+  height: 72px;
+  background: #eee;
+  color: darkmagenta;
+  /* mysolution: makes footer as flex-box to position
+   * footer text at center both horizontally & vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
