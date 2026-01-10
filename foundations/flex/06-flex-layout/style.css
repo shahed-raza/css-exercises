@@ -16,6 +16,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* mysolution */
+  padding: 8px 16px;
 }
 
 input {
@@ -23,4 +25,54 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* mysolution */
+.header ul, .footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* mysolution */
+.header a, .footer a {
+  text-decoration: none;
+  color: #666;
+}
+
+/* mysolution */
+.footer {
+  background-color: #eeeeee;
+}
+
+/* mysolution: aligns header, content, footer in top, middle, bottom positions respectively
+ * by making the body a vertical flex-box (vertical kebab) */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* mysolution: makes header, footer flex-box to making the left-links, right-links as flex-items
+ * to align left-links & right-links to left & right respectively */
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* mysolution: makes the left-links, right-links flex-box to make their respective links as flex-items */
+.left-links, .right-links {
+  display: flex;
+  gap: 16px;
+  margin: 15px 15px;
+}
+
+/* mysolution: makes content block vertical flex-box (vertical kebab)
+ * align image, input, buttons as desired in the center */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 20px;
 }
