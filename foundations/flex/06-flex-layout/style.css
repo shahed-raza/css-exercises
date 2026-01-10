@@ -5,6 +5,12 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+/* mysolution: aligns header, content, footer in top, middle, bottom positions respectively
+ * by making the body a vertical flex-box (vertical kebab) 
+ * how did pull header, footer apart to the ends? (by making the 'body' as flex-box) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -42,14 +48,6 @@ input {
 /* mysolution */
 .footer {
   background-color: #eeeeee;
-}
-
-/* mysolution: aligns header, content, footer in top, middle, bottom positions respectively
- * by making the body a vertical flex-box (vertical kebab) */
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 /* mysolution: makes header, footer flex-box to making the left-links, right-links as flex-items
